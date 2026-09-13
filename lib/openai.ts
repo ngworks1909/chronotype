@@ -1,6 +1,6 @@
-import OpenAI from 'openai';
+import { OpenAI } from "openai";
 
 export const openai = new OpenAI({
-  baseURL: "https://models.github.ai/inference",
-  apiKey: process.env.OPENAI_API_KEY!,
+	baseURL: "https://router.huggingface.co/v1",
+	apiKey: process.env.HF_TOKEN,
 });

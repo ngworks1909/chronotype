@@ -1,6 +1,6 @@
 import { openai } from '@/lib/openai';
 
-const MODEL = `openai/${process.env.OPENAI_MODEL ?? 'gpt-4o'}`
+const MODEL = process.env.OPENAI_MODEL!
 
 function buildSystemPrompt(): string {
   return `You are a subject-matter expert who writes study material for SSC CGL, SSC CHSL, and similar Indian competitive exams (Indian History section), covering the full timeline from early medieval invasions through modern India.
@@ -21,8 +21,8 @@ function buildUserPrompt(topic: string, words: number): string {
 }
 
 export async function generateHistoryContent(topic: string, words: number): Promise<string> {
-  if (!process.env.OPENAI_API_KEY) {
-    throw new Error("OPENAI_API_KEY is not set in environment variables");
+  if (!process.env.HF_TOKEN) {
+    throw new Error("HF_TOKEN is not set in environment variables");
   }
 
   const maxTokens = Math.min(4096, Math.ceil(words * 1.6) + 200);
