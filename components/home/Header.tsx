@@ -10,7 +10,7 @@ export default function Header() {
           <Keyboard size={32} className="text-[#e2b714]"/>
           <div className="flex flex-col leading-none">
             <span className="text-xl font-bold text-[#d1d0c5]">
-              monkey<span className="text-[#646669]">type</span>
+              chrono<span className="text-[#646669]">key</span>
             </span>
           </div>
         </Link>

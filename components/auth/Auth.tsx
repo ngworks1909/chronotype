@@ -22,7 +22,7 @@ export default function Auth({ type }: { type: AuthType }) {
           </div> */}
           <Keyboard size={32} className="text-[#e2b714]"/>
           <span className="text-2xl font-bold text-[#d1d0c5] tracking-tight">
-            monkey<span className="text-[#e2b714]">type</span>
+            chrono<span className="text-[#e2b714]">key</span>
           </span>
         </Link>
 
