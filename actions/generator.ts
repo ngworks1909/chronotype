@@ -26,11 +26,8 @@ export async function generateHistoryContent(topic: string, words: number): Prom
     throw new Error("OPENROUTER_API_KEY is not set in environment variables");
   }
 
-  const maxTokens = Math.min(4096, Math.ceil(words * 1.6) + 200);
-
   const completion = await openai.chat.completions.create({
     model: MODEL,
-    max_tokens: maxTokens,
     temperature: 0.7,
     messages: [
       { role: "system", content: buildSystemPrompt() },
