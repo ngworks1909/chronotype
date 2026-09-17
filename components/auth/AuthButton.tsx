@@ -42,7 +42,7 @@ export default function AuthButton({ type }: { type: AuthType }) {
               if(response?.ok){
                 toast.success("Login successful")
                 setState({email: "", password: "", username: ""})
-                router.push(`/`);
+                window.location.assign("/");
               }
               else{
                 toast("Login failed")
